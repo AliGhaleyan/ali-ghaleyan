@@ -25,7 +25,7 @@ const MotionContainer = ({ className, children, ...props }: HTMLMotionProps<"div
             animate={controls}
             initial="initial"
             variants={variants}
-            transition={{ delay: 0.9, duration: 0.5 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
             className={classNames("container", className)}
             {...props}
         >{children}</motion.div>
