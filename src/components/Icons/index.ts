@@ -1,0 +1,13 @@
+export { default as Css3Icon } from "./Css3Icon";
+export { default as DockerIcon } from "./DockerIcon";
+export { default as GitIcon } from "./GitIcon";
+export { default as Html5Icon } from "./Html5Icon";
+export { default as JavascriptIcon } from "./JavascriptIcon";
+export { default as NextJsIcon } from "./NextJsIcon";
+export { default as NpmIcon } from "./NpmIcon";
+export { default as ReactJsIcon } from "./ReactJsIcon";
+export { default as SassIcon } from "./SassIcon";
+export { default as TailwindcssIcon } from "./TailwindcssIcon";
+export { default as TypescriptIcon } from "./TypescriptIcon";
+export { default as WebpackIcon } from "./WebpackIcon";
+export { default as YarnIcon } from "./YarnIcon";

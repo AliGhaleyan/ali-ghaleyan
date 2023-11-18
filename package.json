@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:icons": "npx @svgr/cli --typescript --out-dir ./src/components/Icons --ignore-existing -- ./src/assets/icons"
   },
   "dependencies": {
+    "@svgr/cli": "^8.1.0",
     "classnames": "^2.3.2",
     "framer-motion": "^10.16.5",
     "next": "14.0.2",
