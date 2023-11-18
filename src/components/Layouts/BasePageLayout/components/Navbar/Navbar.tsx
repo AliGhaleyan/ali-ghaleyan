@@ -20,12 +20,14 @@ const Navbar = () => {
             const scrollPosition = window.scrollY + window.innerHeight / 2;
 
             for (const { id, offset } of sectionOffsets.reverse()) {
-                if (offset && scrollPosition >= offset) {
+                if (typeof offset !== "undefined" && scrollPosition >= offset) {
                     setActiveItem(id);
                     break;
                 }
             }
         };
+
+        handleScroll();
 
         window.addEventListener('scroll', handleScroll);
 
