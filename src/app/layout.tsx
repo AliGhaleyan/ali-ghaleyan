@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { BasePageLayout } from '@/components/Layouts'
+import { BasePageLayout } from '@/components/Layouts';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,13 +21,14 @@ export default function RootLayout({
       <head>
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self' 'unsafe-inline'; connect-src 'self' vitals.vercel-insights.com; style-src-elem 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;" />
+          content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' vitals.vercel-insights.com; style-src-elem 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src-elem 'self' 'unsafe-inline' https://va.vercel-scripts.com" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,700&display=swap" />
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         <BasePageLayout>
           {children}
         </BasePageLayout>
+        <Analytics />
       </body>
     </html>
   )
