@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta
-          http-equiv="Content-Security-Policy"
+          httpEquiv="Content-Security-Policy"
           content="default-src 'self'; connect-src vitals.vercel-insights.com" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,700&display=swap" />
       </head>
