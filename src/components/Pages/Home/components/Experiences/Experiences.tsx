@@ -8,7 +8,7 @@ const Experiences = () => {
         <div className="text-center">
             <h2 className="text-4xl font-bold">Experiences</h2>
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-6 max-w-5xl mx-auto">
             {EXPERIENCES.map((experience, key) => <ExperienceCard key={key} experience={experience} />)}
         </div>
     </MotionContainer>;
