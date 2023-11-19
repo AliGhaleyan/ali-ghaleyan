@@ -13,6 +13,7 @@
     "@svgr/cli": "^8.1.0",
     "@vercel/analytics": "^1.1.1",
     "classnames": "^2.3.2",
+    "date-fns": "^2.30.0",
     "framer-motion": "^10.16.5",
     "next": "14.0.2",
     "react": "^18",
