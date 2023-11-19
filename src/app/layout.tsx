@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self' 'unsafe-inline'; connect-src 'self' vitals.vercel-insights.com; style-src-elem 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;" />
+          content="default-src 'self' 'unsafe-inline'; connect-src 'self' vitals.vercel-insights.com; style-src-elem 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,700&display=swap" />
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
