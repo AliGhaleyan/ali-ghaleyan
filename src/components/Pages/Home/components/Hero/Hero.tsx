@@ -4,7 +4,7 @@ import AboutMe from "./components/AboutMe";
 import { SECTIONS } from "@/constants/sections";
 
 const Hero = () => {
-    return <Container id={SECTIONS.aboutMe.id} className="grid grid-cols-2 gap-10 py-20">
+    return <Container id={SECTIONS.aboutMe.id} className="grid grid-cols-2 gap-10 pt-20">
         <div className="flex justify-center">
             <AboutMe />
         </div>
