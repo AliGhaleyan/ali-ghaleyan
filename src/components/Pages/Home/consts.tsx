@@ -1,5 +1,5 @@
 import { Css3Icon, DockerIcon, GitIcon, Html5Icon, JavascriptIcon, NextJsIcon, NpmIcon, ReactJsIcon, SassIcon, TailwindcssIcon, TypescriptIcon, WebpackIcon, YarnIcon } from "@/components/Icons";
-import { Experience, Skill } from "@/types";
+import { Education, Experience, Skill } from "@/types";
 
 export const SKILLS: Skill[] = [
     {
@@ -90,4 +90,14 @@ export const EXPERIENCES: Experience[] = [
         link: "https://www.shakewell.agency/",
         description: "Shakewell Agency is a digital and socially driven business built on customer understanding, technology and creativity. Specialising in design, web development, app development (iOS & Android), e-commerce, maintenance and support, online marketing services, and all things digital."
     },
+];
+
+export const EDUCATIONS: Education[] = [
+    {
+        schoolName: "Noorani poor",
+        degree: "High School Diploma",
+        fieldOfStudy: "Computer Science",
+        startYear: 2015,
+        endYear: 2018
+    }
 ];

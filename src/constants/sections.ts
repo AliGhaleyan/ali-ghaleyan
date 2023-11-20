@@ -13,6 +13,10 @@ export const SECTIONS: Record<SectionKeys, Section> = {
         id: "experiences",
         title: "Experiences",
     },
+    educations: {
+        id: "educations",
+        title: "Educations",
+    },
     contactMe: {
         id: "contactMe",
         title: "Contact Me",
