@@ -1,5 +1,5 @@
 import { Css3Icon, DockerIcon, GitIcon, Html5Icon, JavascriptIcon, NextJsIcon, NpmIcon, ReactJsIcon, SassIcon, TailwindcssIcon, TypescriptIcon, WebpackIcon, YarnIcon } from "@/components/Icons";
-import { Education, Experience, Skill } from "@/types";
+import { Education, Experience, Project, Skill } from "@/types";
 
 export const SKILLS: Skill[] = [
     {
@@ -100,4 +100,37 @@ export const EDUCATIONS: Education[] = [
         startYear: 2015,
         endYear: 2018
     }
+];
+
+export const PROJECTS: Project[] = [
+    {
+        name: "LanGeek",
+        description: "I contributed to the development of the LanGeek frontend using the Next.js framework with Sass. My responsibilities included designing responsive layouts, implementing dynamic features, optimizing performance and implementing PWA. This project honed my technical skills. I am proud to have contributed to the success of this project.",
+        image: "/images/projects/langeek.png",
+        link: "https://langeek.co/"
+    },
+    {
+        name: "LanGeek Picture Dictionary",
+        description: "Langeek Picture Dictionary is an integral component of the broader Langeek ecosystem, redefining language exploration through visual richness. Developed with the same commitment to excellence that defines Langeek, this picture dictionary offers users an innovative way to explore and understand a diverse range of terms and concepts. Powered by advanced technologies, including the Next.js framework and Sass for a sleek and responsive interface, Langeek Picture Dictionary goes beyond traditional definitions.",
+        image: "/images/projects/langeek-dictionary.png",
+        link: "https://dictionary.lange1ek.co/"
+    },
+    {
+        name: "Trovio",
+        description: "I developed Trovio, a website built with Next.js and Tailwind CSS. Trovio stands out because it not only loads quickly but also has a sleek and appealing design. To make it even better, I implemented Server-Side Rendering (SSR) and Incremental Static Regeneration (ISR). These advanced techniques ensure that Trovio delivers a smooth and responsive user experience.",
+        image: "/images/projects/trovio.png",
+        link: "https://www.trovio.io/"
+    },
+    {
+        name: "OMP",
+        description: "I proudly developed the OMP (Optimize Mind Performance) Dashboard project using Next.js and Tailwind CSS, with a special focus on leveraging the power of React Query. This dynamic combination results in a responsive and feature-rich dashboard. Next.js ensures speedy performance, Tailwind CSS contributes to a sleek design, and React Query enhances data fetching and management.",
+        image: "/images/projects/OMP.png",
+        link: "https://optimizemindperformance.com/"
+    },
+    {
+        name: "Safeproud",
+        description: "I contributed to the development of the Safeproud Dashboard Project, contributing my skills to enhance the project using Next.js, Tailwind CSS, and React Query. Together, these technologies create a robust and user-friendly experience. With Next.js for efficient performance, Tailwind CSS for a stylish design, and React Query for optimized data fetching, Safeproud is a testament to the seamless integration of cutting-edge tools.",
+        image: "/images/projects/safeproud.png",
+        link: "https://safeproud.com.au/"
+    },
 ];

@@ -1,2 +1,2 @@
 export { default as HomePage } from "./Home/HomePage";
-export { SKILLS, EXPERIENCES, EDUCATIONS } from "./Home/consts";
+export { SKILLS, EXPERIENCES, EDUCATIONS, PROJECTS } from "./Home/consts";

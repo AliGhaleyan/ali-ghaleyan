@@ -1,6 +1,7 @@
-import Educations from "./components/Educations/Educations";
+import Educations from "./components/Educations";
 import Experiences from "./components/Experiences";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
         <Skills />
         <Experiences />
         <Educations />
+        <Projects />
     </div>;
 };
 

@@ -17,6 +17,10 @@ export const SECTIONS: Record<SectionKeys, Section> = {
         id: "educations",
         title: "Educations",
     },
+    projects: {
+        id: "projects",
+        title: "Projects",
+    },
     contactMe: {
         id: "contactMe",
         title: "Contact Me",
