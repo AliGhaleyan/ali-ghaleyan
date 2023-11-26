@@ -113,7 +113,7 @@ export const PROJECTS: Project[] = [
         name: "LanGeek Picture Dictionary",
         description: "Langeek Picture Dictionary is an integral component of the broader Langeek ecosystem, redefining language exploration through visual richness. Developed with the same commitment to excellence that defines Langeek, this picture dictionary offers users an innovative way to explore and understand a diverse range of terms and concepts. Powered by advanced technologies, including the Next.js framework and Sass for a sleek and responsive interface, Langeek Picture Dictionary goes beyond traditional definitions.",
         image: "/images/projects/langeek-dictionary.png",
-        link: "https://dictionary.lange1ek.co/"
+        link: "https://dictionary.langeek.co/"
     },
     {
         name: "Trovio",

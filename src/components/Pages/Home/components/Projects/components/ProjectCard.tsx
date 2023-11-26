@@ -16,8 +16,10 @@ const ProjectCard = ({ project }: Props) => {
             target="_blank"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="relative w-[30rem] aspect-video rounded-3xl">
-            <Image alt={project.name} src={project.image} layout="fill" className="rounded-xl" />
+            className="relative w-[30rem] aspect-video rounded-3xl group overflow-hidden">
+            <div className="absolute z-10 h-full w-full inset-0 backdrop-blur-sm bg-white/30 invisible group-hover:visible" />
+            <FontAwesomeIcon className="absolute z-10 m-auto inset-0 invisible group-hover:visible text-dark-blue-100 h-10 w-10" icon={faArrowUpRightFromSquare} />
+            <Image alt={project.name} src={project.image} layout="fill" className="rounded-3xl" />
         </motion.a>
         <div className="flex flex-1 text-white">
             <div className="w-full pl-12 p-10 rounded-r-3xl grid gap-4">
