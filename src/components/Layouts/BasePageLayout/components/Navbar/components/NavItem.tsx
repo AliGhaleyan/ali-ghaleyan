@@ -1,12 +1,11 @@
 "use client"
 import classNames from "classnames";
-import { motion } from "framer-motion";
-import { PropsWithChildren, useCallback, useEffect, useMemo, useState } from "react";
+import { HTMLMotionProps, motion } from "framer-motion";
+import { PropsWithChildren, useEffect, useState } from "react";
 
-type Props = PropsWithChildren<{
-    sectionId: string,
-    isActive: boolean
-}>;
+type Props<Email extends string = string> = PropsWithChildren<{
+    email?: Email
+} & (Email extends string ? { sectionId?: string, isActive?: boolean } : { sectionId: string, isActive: boolean })>;
 
 const NavItem = (props: Props) => {
     const [element, setElement] = useState<HTMLElement | null>();
@@ -17,24 +16,29 @@ const NavItem = (props: Props) => {
     };
 
     useEffect(() => {
-        if (element) return;
+        if (element || !props.sectionId) return;
 
         setElement(document.getElementById(props.sectionId));
     }, [props.sectionId, element]);
 
-    return <motion.div
-        initial={{ scale: .9 }}
-        whileHover={{ scale: 1.125 }}
-        whileTap={{ scale: 0.8 }}
-        onClick={handleOnClick}
-        className={classNames(
-            "relative cursor-pointer text-primary font-semibold",
+    const motionProps: HTMLMotionProps<"div" | "a"> = {
+        initial: { scale: .9 },
+        whileHover: { scale: 1.125 },
+        whileTap: { scale: 0.8 },
+        onClick: handleOnClick,
+        className: classNames(
+            "relative cursor-pointer text-white font-semibold",
             "hover:font-bold",
-            "after:absolute after:bottom-0 after:left-[15%] after:top-[1.75em] after:h-[2px] after:w-[70%] after:scale-x-0 after:bg-primary after:transition-all after:duration-300 after:ease-in-out after:content-['']",
+            "after:absolute after:bottom-0 after:left-[15%] after:top-[1.75em] after:h-[2px] after:w-[70%] after:scale-x-0 after:bg-white after:transition-all after:duration-300 after:ease-in-out after:content-['']",
             props.isActive ? "after:scale-x-110" : "after:hover:scale-x-110"
-        )}>
-        {props.children}
-    </motion.div>;
+        ),
+        children: props.children
+    }
+
+    if (props.email)
+        return <motion.a {...motionProps as HTMLMotionProps<"a">} href={`mailto:${props.email}`} />;
+
+    return <motion.div {...motionProps as HTMLMotionProps<"div">} />;
 };
 
 export default NavItem;

@@ -5,12 +5,11 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
 const HomePage = () => {
-    return <div className="grid gap-80">
+    return <div className="grid gap-40">
         <Hero />
-        <Skills />
         <Experiences />
-        <Educations />
         <Projects />
+        <Educations />
     </div>;
 };
 

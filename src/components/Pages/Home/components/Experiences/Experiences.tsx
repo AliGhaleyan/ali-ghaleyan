@@ -1,12 +1,11 @@
 import { MotionContainer } from "@/components/Fragments";
 import { EXPERIENCES } from "@/components/Pages";
 import { SECTIONS } from "@/constants/sections";
-import BackgroundShapes from "./components/BackgroundShapes";
 import ExperienceCard from "./components/ExperienceCard";
 
 const Experiences = () => {
     return <div className="relative" id={SECTIONS.experiences.id}>
-        <BackgroundShapes />
+        {/* <BackgroundShapes /> */}
         <div className="backdrop-blur-md z-40 bg-white/30">
             <MotionContainer className="grid gap-20">
                 <div className="text-center">

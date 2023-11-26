@@ -39,10 +39,12 @@ const Navbar = () => {
     return <Container>
         <div className="gap-5 flex py-8 justify-center">
             {Object.keys(SECTIONS).map((key) => {
+                if (key == "contactMe") return;
                 const section = SECTIONS[key as SectionKeys];
                 return <NavItem key={key} sectionId={section.id}
                     isActive={activeItem == section.id}>{section.title}</NavItem>;
             })}
+            <NavItem email="mr.ali.serjik@gmail.com">{SECTIONS.contactMe.title}</NavItem>
         </div>
     </Container>;
 };
