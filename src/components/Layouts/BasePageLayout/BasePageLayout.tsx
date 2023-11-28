@@ -1,4 +1,5 @@
 "use client"
+import Footer from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { motion } from "framer-motion";
 
@@ -9,6 +10,7 @@ const BasePageLayout = (props: React.PropsWithChildren) => {
             <Navbar />
         </div>
         {props.children}
+        <Footer />
     </motion.main>;
 };
 

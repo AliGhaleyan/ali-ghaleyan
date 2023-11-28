@@ -3,12 +3,8 @@ import { Container } from "@/components/Fragments";
 import { SECTIONS } from "@/constants/sections";
 import { Section, SectionKeys } from "@/types";
 import { useEffect, useState } from "react";
+import SocialIcons from "../SocialIcons";
 import NavItem from "./components/NavItem";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
-import { faAt } from "@fortawesome/free-solid-svg-icons";
-import { faTelegram } from "@fortawesome/free-brands-svg-icons/faTelegram";
 
 const Navbar = () => {
     const [activeItem, setActiveItem] = useState<Section["id"]>();
@@ -51,18 +47,7 @@ const Navbar = () => {
             <NavItem email="mr.ali.serjik@gmail.com">{SECTIONS.contactMe.title}</NavItem>
         </div>
         <div className="flex gap-4 [&>a>svg]:h-6 [&>a>svg]:w-6">
-            <a href="https://github.com/AliGhaleyan" target="_blank">
-                <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a href="https://www.linkedin.com/in/ali-ghaleyan-8014b0187/" target="_blank">
-                <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a href="https://t.me/Serjikaa">
-                <FontAwesomeIcon icon={faTelegram} />
-            </a>
-            <a href="mailto:mr.ali.serjik@gmail.com">
-                <FontAwesomeIcon icon={faAt} />
-            </a>
+            <SocialIcons />
         </div>
     </Container>;
 };
