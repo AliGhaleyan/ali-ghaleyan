@@ -46,7 +46,10 @@ const Navbar = () => {
     };
   }, []);
 
-  console.log(isOpen);
+  useEffect(() => {
+    if (typeof document == "undefined") return;
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   return (
     <>
@@ -81,54 +84,58 @@ const Navbar = () => {
         </a>
       </Container>
 
-      {createPortal(
-        <>
-          <div
-            className={classNames(
-              "inset-0 bg-black/25 z-50",
-              isOpen ? "fixed" : "hidden"
-            )}
-            onClick={toggleMobileMenu}
-          />
+      {typeof document !== "undefined" &&
+        createPortal(
+          <>
+            <div
+              className={classNames(
+                "inset-0 bg-black/25 z-50",
+                isOpen ? "fixed" : "hidden"
+              )}
+              onClick={toggleMobileMenu}
+            />
 
-          <div
-            className={classNames(
-              "fixed flex flex-col gap-6 p-2 top-0 bottom-0 left-0 min-h-full transition-all duration-300 z-[1050] bg-white w-3/4",
-              isOpen
-                ? "translate-x-0 opacity-100"
-                : "-translate-x-full opacity-0"
-            )}
-          >
-            <div className="flex justify-end text-dark-gray-700 pt-4 px-4">
-              <FontAwesomeIcon
-                icon={faXmark}
-                className="!h-6 !w-6"
-                onClick={toggleMobileMenu}
-              />
+            <div
+              className={classNames(
+                "fixed flex flex-col gap-6 p-2 top-0 bottom-0 left-0 min-h-full transition-all duration-300 z-[1050] bg-white w-3/4",
+                isOpen
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-full opacity-0"
+              )}
+            >
+              <div className="flex justify-end text-dark-gray-700 pt-4 px-4">
+                <FontAwesomeIcon
+                  icon={faXmark}
+                  className="!h-6 !w-6"
+                  onClick={toggleMobileMenu}
+                />
+              </div>
+              <div className="grid text-dark-blue">
+                {Object.keys(SECTIONS).map((key) => {
+                  if (key == "contactMe") return;
+                  const section = SECTIONS[key as SectionKeys];
+                  return (
+                    <NavItem
+                      key={key}
+                      sectionId={section.id}
+                      className="p-3 border-b text-xl border-b-gray-400"
+                      onClick={toggleMobileMenu}
+                    >
+                      {section.title}
+                    </NavItem>
+                  );
+                })}
+                <NavItem
+                  email="mr.ali.serjik@gmail.com"
+                  className="p-3 text-xl"
+                >
+                  {SECTIONS.contactMe.title}
+                </NavItem>
+              </div>
             </div>
-            <div className="grid text-dark-blue">
-              {Object.keys(SECTIONS).map((key) => {
-                if (key == "contactMe") return;
-                const section = SECTIONS[key as SectionKeys];
-                return (
-                  <NavItem
-                    key={key}
-                    sectionId={section.id}
-                    className="p-3 border-b text-xl border-b-gray-400"
-                    onClick={toggleMobileMenu}
-                  >
-                    {section.title}
-                  </NavItem>
-                );
-              })}
-              <NavItem email="mr.ali.serjik@gmail.com" className="p-3 text-xl">
-                {SECTIONS.contactMe.title}
-              </NavItem>
-            </div>
-          </div>
-        </>,
-        document.body
-      )}
+          </>,
+          document.body
+        )}
     </>
   );
 };
