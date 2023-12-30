@@ -3,13 +3,20 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { BasePageLayout } from "@/components/Layouts";
 import { Analytics } from "@vercel/analytics/react";
-import { NextSeo } from "next-seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ali Ghaleyan",
-  description: "Ali Ghaleyan - Frontend Developer",
+  description:
+    "I'm Ali Ghaleyan, a frontend developer with 3 years of experience in ReactJs and NextJs.I'm passionate about turning ideas into interactive and visually appealing experiences.In the ever-changing tech world, I thrive on learning and adapting, using each project to expand my skill set and explore innovative solutions.I'm always excited to delve into new technologies and best practices.",
+  openGraph: {
+    type: "website",
+    siteName: "Ali Serjik",
+  },
+  twitter: {
+    siteId: "@ghaleyan",
+  },
 };
 
 export default function RootLayout({
@@ -32,11 +39,6 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
-        <NextSeo
-          title="Ali Ghaleyan"
-          description="I'm Ali Ghaleyan, a frontend developer with 3 years of experience in ReactJs and NextJs.I'm passionate about turning ideas into interactive and visually appealing experiences.In the ever-changing tech world, I thrive on learning and adapting, using each project to expand my skill set and explore innovative solutions.I'm always excited to delve into new technologies and best practices."
-          canonical="https://aliserjik.ir/"
-        />
         <BasePageLayout>{children}</BasePageLayout>
         <Analytics />
       </body>
