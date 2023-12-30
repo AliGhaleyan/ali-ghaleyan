@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Ali Serjik",
+    url: "https://aliserjik.ir/",
   },
   twitter: {
     siteId: "@ghaleyan",
