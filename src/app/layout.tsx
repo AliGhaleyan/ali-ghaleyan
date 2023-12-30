@@ -28,6 +28,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta
+          name="google-site-verification"
+          content="BIeb3XLDKDUx52LXML7PbcTolBA1ubB2qPDahQbqxwo"
+        />
+        <meta
           httpEquiv="Content-Security-Policy"
           content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: blob:; connect-src 'self' vitals.vercel-insights.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; script-src-elem 'self' 'unsafe-inline' https://va.vercel-scripts.com"
         />
